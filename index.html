@@ -20,41 +20,36 @@
 		<div id="content">
 			<div id="code">
 				<span class="comments">/**</span><br />
-				<span class="space"/><span class="comments">* We are both Umich students and programmers,</span><br />
-				<span class="space"/><span class="comments">* so I write some code to celebrate our 1st Chinese Vanlentine's Day.</span><br />
+				<span class="space"/><span class="comments">* Happy Chinese Vanlentine's Day.</span><br />
 				<span class="space"/><span class="comments">*/</span><br />
-				Boy i = <span class="keyword">new</span> Boy(<span class="string">"Mr.Tang"</span>);<br />
-				Girl u = <span class="keyword">new</span> Girl(<span class="string">"LeLe"</span>);<br />
-				<span class="comments">// July 2th, 2017, I told you I love you. </span><br />
-				i.love(u);<br />
-				<span class="comments">// Luckily, you accepted and became my girlfriend eversince.</span><br />
-				u.accepted();<br />
-				<span class="comments">// Since then, I miss u every day.</span><br />
-				i.miss(u);<br />
-				<span class="comments">// And take care of u and our love.</span><br />
-				i.takeCareOf(u);<br />
-				<span class="comments">// You say that you won't be so easy to marry me.</span><br />
-				<span class="comments">// So I keep waiting and I have confidence that you will.</span><br />
-				<span class="keyword">boolean</span> isHesitate = <span class="keyword">true</span>;<br />
-				<span class="keyword">while</span> (isHesitate) {<br />
-				<span class="placeholder"/>i.waitFor(u);<br />
-				<span class="placeholder"/><span class="comments">// I think it is an important decision</span><br />
-				<span class="placeholder"/><span class="comments">// and you should think it over.</span><br />
-				<span class="placeholder"/>isHesitate = u.thinkOver();<br />
-				}<br />
-				<span class="comments">// After a romantic wedding, we will live happily ever after.</span><br />
-				i.marry(u);<br />
-				i.liveHappilyWith(u);<br />
+				Boy *i = <span class="keyword">new</span> Boy(<span class="string">"Yuhao"</span>);<br />
+				Girl *u = <span class="keyword">new</span> Girl(<span class="string">"Yichangle"</span>);<br />
+				<span class="comments">// July 2th, 2017 , I told you that I love you:</span><br />
+				i->love(u);<br />
+				<span class="comments">// Luckily, you accepted me, though after a "900-second hesitance".</span><br />
+				u->accept(i);<br />
+				<span class="comments">// Since then, u became the one I'm always thinking of.</span><br />
+				Couple *we = <span class="keyword">new</span> Couple(i,u);<br />
+				<span class="comments">// You love travelling and I love photographing.</span><br />
+				<span class="comments">// You became the most beautiful scene in my camera.</span><br />
+				we->travel("Seattle", "Portland", "Japan");<br />
+				i->photograph(u);<br />
+				<span class="comments">// I will try my best to take care of our future.</span><br />
+				<span class="comments">// And many more places will I take you to.</span><br />
+				int cnt = 3;<br />
+				<span>while</span> (Time::getCurTime() < Time::FOREVER) {<br />
+				<span class="placeholder"/> we->travel(Travel::ALL_PLACES[cnt++]) <br />
+				}
 			</div>
 			<div id="loveHeart">
 				<canvas id="garden"></canvas>
 				<div id="words">
 					<div id="messages">
-						LeLe, I have fallen in love with you for
+						乐乐, we have fallen in love with each other for
 						<div id="elapseClock"></div>
 					</div>
 					<div id="loveu">
-						Love u forever and ever.<br/>
+						Love you forever and ever.<br/>
 						<div class="signature">- Mr.Tang</div>
 					</div>
 				</div>
@@ -73,8 +68,8 @@
 		var offsetX = $("#loveHeart").width() / 2;
 		var offsetY = $("#loveHeart").height() / 2 - 55;
 		var together = new Date();
-		together.setFullYear(2017, 6, 2);
-		together.setHours(16);
+		together.setFullYear(2017, 6, 3);
+		together.setHours(7);
 		together.setMinutes(0);
 		together.setSeconds(0);
 		together.setMilliseconds(0);
